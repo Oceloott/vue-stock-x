@@ -1,44 +1,12 @@
 <script setup>
-import { ref,computed } from 'vue';
+import { computed } from 'vue';
 import CartItem from './CartItem.vue';
-
-const productInCart = ref([
-    {
-        id: 1,
-        title: 'Chaussure Classique',
-        image: 'https://via.placeholder.com/400x300',
-        price: 89.99 ,
-        quantity: 1
-    },
-    {
-        id: 2,
-        title: 'Manteau',
-        image: 'https://via.placeholder.com/400x300',
-        price: 129.99,
-        quantity: 1
-    },
-    {
-        id: 3,
-        title: 'Pantalon',
-        image: 'https://via.placeholder.com/400x300',
-        price: 49.99,
-        quantity: 1
-    }
-])
-
-
-const deleteItem = (id) => {
-    const index = productInCart.value.findIndex(product => product.id === id);
-    if (index !== -1) {
-        productInCart.value.splice(index, 1);
-    }
-}
-
+import {useCheckoutStore} from "@/Store/useCheckoutStore.js";
+const { products } = useCheckoutStore()
 
 const totalPrice = computed(() => {
-    return productInCart.value.reduce((acc, product) => {
-        return acc + product.price * product.quantity;
-    }, 0);
+  return 0;
+
 });
 
 </script>
@@ -48,16 +16,16 @@ const totalPrice = computed(() => {
         <h2 class="text-2xl font-bold mb-6">Mon Panier</h2>
         <div class="space-y-6">
 
-            <CartItem
-                v-for="(product, index) in productInCart"
-                :key="index"
-                :title="product.title"
-                :image="product.image"
-                :price="product.price"
-                :quantity="product.quantity"
-                :id="product.id"
-                @delete-item="deleteItem"
+
+          <CartItem
+            v-for="(product, index) in products"
+            :key="index"
+            :title="product.title"
+            :price="product.price"
+            :quantity="product.quantity"
+            :id="product.id"
             />
+
 
 
             <div class="text-right mt-10">

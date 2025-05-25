@@ -1,11 +1,18 @@
 <script setup>
+
+import {useCheckoutStore} from "@/Store/useCheckoutStore.js";
+
 const menuItems = [
-  { name: 'Accueil', href: '#' },
+  { name: 'Accueil', href: '/' },
   { name: 'Nouveautés', href: '#' },
   { name: 'Homme', href: '#' },
   { name: 'Femme', href: '#' },
-  { name: 'Contact', href: '#' }
+  { name: 'Contact', href: '#' },
 ]
+
+const checkoutStore = useCheckoutStore()
+
+
 </script>
 
 <template>
@@ -13,9 +20,12 @@ const menuItems = [
       <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold">Chaussures Élégance</h1>
         <nav class="space-x-6 hidden md:flex">
-          <a v-for="item in menuItems" :key="item.name" :href="item.href" class="text-gray-700 hover:text-blue-600 transition">
+          <RouterLink v-for="item in menuItems" :key="item.name" :to="item.href" class="text-gray-700 hover:text-blue-600 transition">
             {{ item.name }}
-          </a>
+          </RouterLink>
+          <RouterLink  class="text-gray-700 hover:text-blue-600 transition" to="cart">
+            Panier ({{ checkoutStore.countProducts }})
+          </RouterLink>
         </nav>
         <button class="md:hidden">☰</button>
       </div>

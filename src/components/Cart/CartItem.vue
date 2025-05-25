@@ -1,4 +1,6 @@
 <script setup>
+import {useCheckoutStore} from "@/Store/useCheckoutStore.js";
+
 const props = defineProps({
     id: {
         type: Number,
@@ -11,7 +13,7 @@ const props = defineProps({
     image: {
         type: String,
         default: 'https://via.placeholder.com/400x300',
-        required: true
+        required: false
     },
     price : {
         type: Number,
@@ -22,11 +24,13 @@ const props = defineProps({
         default: 1
     }
 })
-const emit = defineEmits(['delete-item'])
 
-const deleteElement = () => {
-  emit('delete-item', props.id)
+const { removeProduct } = useCheckoutStore()
+function deleteElement() {
+  removeProduct(props.id)
 }
+
+
 </script>
 
 <template>
