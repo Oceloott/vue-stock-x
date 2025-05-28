@@ -13,14 +13,14 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/category',
-      name: 'category',
-      component: () => import('@/views/CategoryHomeView.vue'),
-    },
-    {
       path: '/cart',
       name: 'cart',
       component: () => import('@/views/CartView.vue'),
+    },
+    {
+      path: '/category/:id',
+      name: 'category-detail',
+      component: () => import('@/views/CategoryHomeView.vue'),
     },
     {
       path: '/category/list',

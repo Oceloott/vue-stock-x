@@ -14,28 +14,6 @@ onMounted(async () => {
 const products = computed(() => productsStore.allProducts);
 
 
-
-// const product = [
-//   {
-//     title: 'Manteau',
-//     price: 10,
-//     description: 'Manteau en cuir véritable, confort ultime et style intemporel.',
-//     image: 'https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=1&quality=80 1x, https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=2&quality=75 2x, https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=3&quality=50 3x'
-//   },
-//   {
-//     title: 'T-shirt',
-//     price: 12,
-//     description: 'Manteau en cuir véritable, confort ultime et style intemporel.',
-//     image: 'https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=1&quality=80 1x, https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=2&quality=75 2x, https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=3&quality=50 3x'
-//   },
-//   {
-//     title: 'Pentalon',
-//     price: 32,
-//     description: 'Manteau en cuir véritable, confort ultime et style intemporel.',
-//     image: 'https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=1&quality=80 1x, https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=2&quality=75 2x, https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltc5a55f409dcd724d/6773257bb290b35ed991f4f6/Copy_of_Brand_Tile_Template_(9).png?auto=webp&format=pjpg&width=234&height=160&dpr=3&quality=50 3x'
-//   }
-// ]
-
 </script>
 
 <template>

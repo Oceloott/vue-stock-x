@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
-import {computed, ref} from "vue";
+import { computed, ref } from "vue";
 
 
 
-export const useCheckoutStore = defineStore('checkoutStore',()=> {
+export const useCheckoutStore = defineStore('checkoutStore', () => {
     const products = ref([])
 
     const addProduct = (product) => {
